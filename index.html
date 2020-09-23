@@ -2,14 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<style>
-    #hed1{text-align:center}
-    #hed2{text-align:center}
-</style>
-    
-<h1>Income and Police Shootings</h1>
-
-<h2>By: Marc Ojalvo and Kyle Strougo</h2>
+<title>DataAnalysis</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13084,14 +13077,19 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Import Data</p>
+<p>Our project will be looking at the correlation between cities' income and where police shootings occur. We hypothesize that there are more police shootings in low-income areas than in higher-income areas and that there is a correlation between income inequality and police shootings.</p>
+<p>The primary data set we will be looking at is the mean income of all U.S cities &amp; towns as of 2019. The data sets include more information than just the mean income, such as the county, type, longitude, latitude, median, and standard deviation. After cleaning up the data, we decided to keep the state, city, mean, median, and standard deviation. We decided to keep both the median and mean because a difference between the two could entail skewed data. The standard deviation is a good indicator of income inequality within a city - another data point that we plan to investigate. We found this data set from <a href="https://www.kaggle.com/goldenoakresearch/us-household-income-stats-geo-locations/notebooks">https://www.kaggle.com/goldenoakresearch/us-household-income-stats-geo-locations/notebooks</a></p>
+<p>Another dataset we will be analyzing is police shootings that occurred between 2015 and 2020. The data set contains the victim's name, the data, race, gender, city, and other information about the shooting. Since we are just looking at the correlation between a city's income and the number of police shootings, we decided to rid most of the data besides where the shooting occurred and the victims' names. We found this data set from <a href="https://www.kaggle.com/ahsen1330/us-police-shootings">https://www.kaggle.com/ahsen1330/us-police-shootings</a></p>
+<p>The mean, median, and standard deviation of the city income data set will be the basis for our project. We plan to compare the number of police shootings in a city with the city's income statistics to test our hypotheses. After mapping each shooting to a city, we will determine if there is a correlation between the data points. Modifying the data to our liking will require utilizing SQL like commands made available in Pandas. We will also use visualization techniques to graph and visualize any trends.</p>
+<p>In terms of collaboration, we have been in contact for a few weeks now. After researching what information was available online, we decided that these two datasets could work great together. The two overlap with the necessary attributes to make an analysis and correlation. We expect to find a general trend between the two and are both interested in the possible results. We will not need any more data sets to test our hypotheses.</p>
+<p>We have been collaborating through Zoom, sharing our screens, and switching off coding while the other assists. Jupyter Notebook has been an excellent tool for debugging and working with the dataset. Furthermore, GitHub has served as an environment to hold and commit new changes to our files. We have also utilized our local editors and used excel to preview and make changes to data organization.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#impoting pandas libarary</span>
@@ -13105,7 +13103,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#importing income data and turning it into data frame</span>
@@ -13123,7 +13121,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13261,7 +13259,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#importing shootings data and turning it into data frame</span>
@@ -13279,7 +13277,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[56]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13423,7 +13421,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#removed columns from income data unnessary for our analysis</span>
@@ -13441,7 +13439,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[60]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13574,11 +13572,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#removed columns from shooting data unnessary for our analysis</span>
-<span class="n">shootings_df</span> <span class="o">=</span> <span class="n">shootings_df</span><span class="p">[[</span><span class="s1">&#39;city&#39;</span><span class="p">,</span><span class="s1">&#39;state&#39;</span><span class="p">,</span><span class="s1">&#39;race&#39;</span><span class="p">]]</span>
+<span class="n">shootings_df</span> <span class="o">=</span> <span class="n">shootings_df</span><span class="p">[[</span><span class="s1">&#39;city&#39;</span><span class="p">,</span><span class="s1">&#39;state&#39;</span><span class="p">]]</span>
 <span class="n">shootings_df</span>
 </pre></div>
 
@@ -13592,7 +13590,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[59]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13617,7 +13615,6 @@ div#notebook {
       <th></th>
       <th>city</th>
       <th>state</th>
-      <th>race</th>
     </tr>
   </thead>
   <tbody>
@@ -13625,35 +13622,29 @@ div#notebook {
       <th>0</th>
       <td>Shelton</td>
       <td>WA</td>
-      <td>Asian</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Aloha</td>
       <td>OR</td>
-      <td>White</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Wichita</td>
       <td>KS</td>
-      <td>Hispanic</td>
     </tr>
     <tr>
       <th>3</th>
       <td>San Francisco</td>
       <td>CA</td>
-      <td>White</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Evans</td>
       <td>CO</td>
-      <td>Hispanic</td>
     </tr>
     <tr>
       <th>...</th>
-      <td>...</td>
       <td>...</td>
       <td>...</td>
     </tr>
@@ -13661,35 +13652,30 @@ div#notebook {
       <th>4890</th>
       <td>Atlanta</td>
       <td>GA</td>
-      <td>Black</td>
     </tr>
     <tr>
       <th>4891</th>
       <td>Crown Point</td>
       <td>IN</td>
-      <td>Black</td>
     </tr>
     <tr>
       <th>4892</th>
       <td>Sedalia</td>
       <td>MO</td>
-      <td>White</td>
     </tr>
     <tr>
       <th>4893</th>
       <td>Kansas City</td>
       <td>MO</td>
-      <td>White</td>
     </tr>
     <tr>
       <th>4894</th>
       <td>Lawrence</td>
       <td>KS</td>
-      <td>White</td>
     </tr>
   </tbody>
 </table>
-<p>4895 rows × 3 columns</p>
+<p>4895 rows × 2 columns</p>
 </div>
 </div>
 
