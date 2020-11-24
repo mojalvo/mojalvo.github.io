@@ -11,13 +11,12 @@
     #hed1{text-align:middle}
     #hed2{text-align:middle}
 </style>
-    
+
 <h1>Income and Police Shootings</h1>
 
 <h2>By: Marc Ojalvo and Kyle Strougo</h2>
 
 <style type="text/css">
-
     /*!
 *
 * Twitter Bootstrap
@@ -9137,15 +9136,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12527,7 +12526,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13041,14 +13040,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13101,11 +13100,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Our project will be looking at the correlation between cities' income and where police shootings occur.  We are attempting to answer the following questions:</p>
+<p>Since 2015, there has been almost 5000 cases of police brutality in the United States. With the death of George Floyd this past summer, there has been a call to action to refrom the policing system to prevent unecessary deaths from occuring. (Futher reading about these issues attached at the end of notebook)</p>
+<p>Our project hopes to find patters in police brulaity to infrom and educate others on the most suspectible groups of potential victims. We hope to use data to find patters and valuable statitics.</p>
+<p>Our project will be looking at the correlation between cities' income and where police shootings occur. We are attempting to answer the following questions:</p>
 <h4 id="1.-Is-there-a-correlation-between-income-and-police-brutality?">1. Is there a correlation between income and police brutality?<a class="anchor-link" href="#1.-Is-there-a-correlation-between-income-and-police-brutality?">&#182;</a></h4><h4 id="2.-Is-there-a-correlation-between-income-inequality-(standard-deviation-of-income)-and-police-brutality-cases?">2. Is there a correlation between income inequality (standard deviation of income) and police brutality cases?<a class="anchor-link" href="#2.-Is-there-a-correlation-between-income-inequality-(standard-deviation-of-income)-and-police-brutality-cases?">&#182;</a></h4><h4 id="3.-What-are-the-demographics-of-police-brutality-vicitims?-Are-certain-groups-disproportionately-targeted?">3. What are the demographics of police brutality vicitims? Are certain groups disproportionately targeted?<a class="anchor-link" href="#3.-What-are-the-demographics-of-police-brutality-vicitims?-Are-certain-groups-disproportionately-targeted?">&#182;</a></h4><p>We hypothesize that there are more police shootings in low-income areas than in higher-income areas and that there is a correlation between income inequality and police shootings.</p>
 <p>The primary data set we will be looking at is the mean income of all U.S cities &amp; towns as of 2019. The data sets include more information than just the mean income, such as the county, type, longitude, latitude, median, and standard deviation. After cleaning up the data, we decided to keep the state, city, mean, median, and standard deviation. We decided to keep both the median and mean because a difference between the two could entail skewed data. The standard deviation is a good indicator of income inequality within a city - another data point that we plan to investigate. We found this data set from <a href="https://www.kaggle.com/goldenoakresearch/us-household-income-stats-geo-locations/notebooks">https://www.kaggle.com/goldenoakresearch/us-household-income-stats-geo-locations/notebooks</a></p>
 <p>Another dataset we will be analyzing is police shootings that occurred between 2015 and 2020. The data set contains the victim's name, the data, race, gender, city, and other information about the shooting. Since we are just looking at the correlation between a city's income and the number of police shootings, we decided to rid most of the data besides where the shooting occurred and the victims' names. We found this data set from <a href="https://www.kaggle.com/ahsen1330/us-police-shootings">https://www.kaggle.com/ahsen1330/us-police-shootings</a></p>
-<p>Since the raw counts of police brutality isnt comparable, since some cities have larger population than others. To ensure our data is comparable, we imported the population of every US city and town and divided turned police brutality cases into per 10,000 people. We recived the data from <a href="https://simplemaps.com/data/us-cities">https://simplemaps.com/data/us-cities</a>.</p>
+<p>Since the raw counts of police brutality isn't comparable, since some cities have larger population than others. To ensure our data is comparable, we imported the population of every US city and town and divided turned police brutality cases into per 10,000 people. We recived the data from <a href="https://simplemaps.com/data/us-cities">https://simplemaps.com/data/us-cities</a>.</p>
 <p>The mean, median, and standard deviation of the city income data set will be the basis for our project. We plan to compare the number of police shootings in a city with the city's income statistics to test our hypotheses. After mapping each shooting to a city, we will determine if there is a correlation between the data points. Modifying the data to our liking will require utilizing SQL like commands made available in Pandas. We will also use visualization techniques to graph and visualize any trends.</p>
 <p>In terms of collaboration, we have been in contact for a few weeks now. After researching what information was available online, we decided that these two datasets could work great together. The two overlap with the necessary attributes to make an analysis and correlation. We expect to find a general trend between the two and are both interested in the possible results. We will not need any more data sets to test our hypotheses.</p>
 <p>We have been collaborating through Zoom, sharing our screens, and switching off coding while the other assists. Jupyter Notebook has been an excellent tool for debugging and working with the dataset. Furthermore, GitHub has served as an environment to hold and commit new changes to our files. We have also utilized our local editors and used excel to preview and make changes to data organization.</p>
@@ -13115,7 +13116,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#installing packages for graphs</span>
@@ -13137,45 +13138,29 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Collecting geopandas
-  Downloading geopandas-0.8.1-py2.py3-none-any.whl (962 kB)
-     |████████████████████████████████| 962 kB 2.5 MB/s eta 0:00:01     |█████████████████▍              | 522 kB 2.5 MB/s eta 0:00:01     |█████████████████████████▏      | 757 kB 2.5 MB/s eta 0:00:01
-Collecting fiona
-  Downloading Fiona-1.8.18-cp38-cp38-manylinux1_x86_64.whl (14.7 MB)
-     |████████████████████████████████| 14.7 MB 3.4 MB/s eta 0:00:01    |███████████████▉                | 7.3 MB 3.5 MB/s eta 0:00:03     |██████████████████▏             | 8.4 MB 3.5 MB/s eta 0:00:02     |██████████████████████          | 10.1 MB 4.9 MB/s eta 0:00:01     |██████████████████████▎         | 10.3 MB 4.9 MB/s eta 0:00:01     |███████████████████████         | 10.6 MB 4.9 MB/s eta 0:00:01     |███████████████████████▋        | 10.9 MB 4.9 MB/s eta 0:00:01     |███████████████████████████     | 12.4 MB 4.9 MB/s eta 0:00:01     |██████████████████████████████▍ | 14.0 MB 3.4 MB/s eta 0:00:01     |███████████████████████████████▊| 14.6 MB 3.4 MB/s eta 0:00:01
-Collecting shapely
-  Downloading Shapely-1.7.1-cp38-cp38-manylinux1_x86_64.whl (1.0 MB)
-     |████████████████████████████████| 1.0 MB 4.5 MB/s eta 0:00:01
-Collecting pyproj&gt;=2.2.0
-  Downloading pyproj-3.0.0.post1-cp38-cp38-manylinux2010_x86_64.whl (6.5 MB)
-     |████████████████████████████████| 6.5 MB 3.7 MB/s eta 0:00:01     |███████████████████▍            | 3.9 MB 3.0 MB/s eta 0:00:01     |█████████████████████           | 4.2 MB 3.0 MB/s eta 0:00:01
+<pre>Requirement already satisfied: geopandas in /opt/conda/lib/python3.8/site-packages (0.8.1)
 Requirement already satisfied: pandas&gt;=0.23.0 in /opt/conda/lib/python3.8/site-packages (from geopandas) (1.1.0)
-Requirement already satisfied: six&gt;=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (1.15.0)
-Collecting cligj&gt;=0.5
-  Downloading cligj-0.7.1-py3-none-any.whl (7.1 kB)
-Requirement already satisfied: attrs&gt;=17 in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (19.3.0)
-Requirement already satisfied: click&lt;8,&gt;=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (7.1.2)
-Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (2020.6.20)
-Collecting munch
-  Downloading munch-2.5.0-py2.py3-none-any.whl (10 kB)
-Collecting click-plugins&gt;=1.0
-  Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+Requirement already satisfied: shapely in /opt/conda/lib/python3.8/site-packages (from geopandas) (1.7.1)
+Requirement already satisfied: fiona in /opt/conda/lib/python3.8/site-packages (from geopandas) (1.8.18)
+Requirement already satisfied: pyproj&gt;=2.2.0 in /opt/conda/lib/python3.8/site-packages (from geopandas) (3.0.0.post1)
 Requirement already satisfied: numpy&gt;=1.15.4 in /opt/conda/lib/python3.8/site-packages (from pandas&gt;=0.23.0-&gt;geopandas) (1.19.1)
 Requirement already satisfied: pytz&gt;=2017.2 in /opt/conda/lib/python3.8/site-packages (from pandas&gt;=0.23.0-&gt;geopandas) (2020.1)
 Requirement already satisfied: python-dateutil&gt;=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas&gt;=0.23.0-&gt;geopandas) (2.8.1)
-Installing collected packages: cligj, munch, click-plugins, fiona, shapely, pyproj, geopandas
-Successfully installed click-plugins-1.1.1 cligj-0.7.1 fiona-1.8.18 geopandas-0.8.1 munch-2.5.0 pyproj-3.0.0.post1 shapely-1.7.1
-Collecting descartes
-  Downloading descartes-1.1.0-py3-none-any.whl (5.8 kB)
+Requirement already satisfied: click&lt;8,&gt;=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (7.1.2)
+Requirement already satisfied: attrs&gt;=17 in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (19.3.0)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (2020.6.20)
+Requirement already satisfied: click-plugins&gt;=1.0 in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (1.1.1)
+Requirement already satisfied: cligj&gt;=0.5 in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (0.7.1)
+Requirement already satisfied: munch in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (2.5.0)
+Requirement already satisfied: six&gt;=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona-&gt;geopandas) (1.15.0)
+Requirement already satisfied: descartes in /opt/conda/lib/python3.8/site-packages (1.1.0)
 Requirement already satisfied: matplotlib in /opt/conda/lib/python3.8/site-packages (from descartes) (3.2.2)
+Requirement already satisfied: numpy&gt;=1.11 in /opt/conda/lib/python3.8/site-packages (from matplotlib-&gt;descartes) (1.19.1)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/conda/lib/python3.8/site-packages (from matplotlib-&gt;descartes) (1.2.0)
 Requirement already satisfied: python-dateutil&gt;=2.1 in /opt/conda/lib/python3.8/site-packages (from matplotlib-&gt;descartes) (2.8.1)
-Requirement already satisfied: cycler&gt;=0.10 in /opt/conda/lib/python3.8/site-packages (from matplotlib-&gt;descartes) (0.10.0)
-Requirement already satisfied: numpy&gt;=1.11 in /opt/conda/lib/python3.8/site-packages (from matplotlib-&gt;descartes) (1.19.1)
 Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /opt/conda/lib/python3.8/site-packages (from matplotlib-&gt;descartes) (2.4.7)
+Requirement already satisfied: cycler&gt;=0.10 in /opt/conda/lib/python3.8/site-packages (from matplotlib-&gt;descartes) (0.10.0)
 Requirement already satisfied: six&gt;=1.5 in /opt/conda/lib/python3.8/site-packages (from python-dateutil&gt;=2.1-&gt;matplotlib-&gt;descartes) (1.15.0)
-Installing collected packages: descartes
-Successfully installed descartes-1.1.0
 </pre>
 </div>
 </div>
@@ -13187,7 +13172,7 @@ Successfully installed descartes-1.1.0
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="MILESTONE-1:-IMPORTATING-DATA">MILESTONE 1: IMPORTATING DATA<a class="anchor-link" href="#MILESTONE-1:-IMPORTATING-DATA">&#182;</a></h1>
+<h1 id="DATA-COLLECTION">DATA COLLECTION<a class="anchor-link" href="#DATA-COLLECTION">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13229,7 +13214,7 @@ Successfully installed descartes-1.1.0
     text-align: center;
     vertical-align: middle;
 }
-</style> 
+</style>
 </div>
 
 </div>
@@ -13265,7 +13250,7 @@ Successfully installed descartes-1.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#importing income data and turning it into data frame</span>
@@ -13283,7 +13268,7 @@ Successfully installed descartes-1.1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13418,6 +13403,193 @@ Successfully installed descartes-1.1.0
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#removed columns from income data unnessary for our analysis</span>
+<span class="n">income_df</span> <span class="o">=</span> <span class="n">income_df</span><span class="p">[[</span><span class="s1">&#39;State_Name&#39;</span><span class="p">,</span><span class="s1">&#39;City&#39;</span><span class="p">,</span><span class="s1">&#39;Mean&#39;</span><span class="p">,</span><span class="s1">&#39;Median&#39;</span><span class="p">,</span><span class="s1">&#39;Stdev&#39;</span><span class="p">,</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="s1">&#39;Lon&#39;</span><span class="p">]]</span>
+
+<span class="c1">#rename state column to match income name</span>
+<span class="n">income_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;State_Name&#39;</span><span class="p">:</span><span class="s1">&#39;State&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">income_df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>City</th>
+      <th>Mean</th>
+      <th>Median</th>
+      <th>Stdev</th>
+      <th>Lat</th>
+      <th>Lon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>Chickasaw</td>
+      <td>38773</td>
+      <td>30506</td>
+      <td>33101</td>
+      <td>30.771450</td>
+      <td>-88.079697</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alabama</td>
+      <td>Louisville</td>
+      <td>37725</td>
+      <td>19528</td>
+      <td>43789</td>
+      <td>31.708516</td>
+      <td>-85.611039</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Alabama</td>
+      <td>Columbiana</td>
+      <td>54606</td>
+      <td>31930</td>
+      <td>57348</td>
+      <td>33.191452</td>
+      <td>-86.615618</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Alabama</td>
+      <td>Satsuma</td>
+      <td>63919</td>
+      <td>52814</td>
+      <td>47707</td>
+      <td>30.874343</td>
+      <td>-88.009442</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alabama</td>
+      <td>Dauphin Island</td>
+      <td>77948</td>
+      <td>67225</td>
+      <td>54270</td>
+      <td>30.250913</td>
+      <td>-88.171268</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>32521</th>
+      <td>Puerto Rico</td>
+      <td>Guaynabo</td>
+      <td>30649</td>
+      <td>13729</td>
+      <td>37977</td>
+      <td>18.397925</td>
+      <td>-66.130633</td>
+    </tr>
+    <tr>
+      <th>32522</th>
+      <td>Puerto Rico</td>
+      <td>Aguada</td>
+      <td>15520</td>
+      <td>9923</td>
+      <td>15541</td>
+      <td>18.385424</td>
+      <td>-67.203310</td>
+    </tr>
+    <tr>
+      <th>32523</th>
+      <td>Puerto Rico</td>
+      <td>Aguada</td>
+      <td>41933</td>
+      <td>34054</td>
+      <td>31539</td>
+      <td>18.356565</td>
+      <td>-67.180686</td>
+    </tr>
+    <tr>
+      <th>32524</th>
+      <td>Puerto Rico</td>
+      <td>Aguada</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>18.412041</td>
+      <td>-67.213413</td>
+    </tr>
+    <tr>
+      <th>32525</th>
+      <td>Puerto Rico</td>
+      <td>Aguadilla</td>
+      <td>28049</td>
+      <td>20229</td>
+      <td>33333</td>
+      <td>18.478094</td>
+      <td>-67.160453</td>
+    </tr>
+  </tbody>
+</table>
+<p>32526 rows × 7 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For our income data, we kepts all information we though would be usefull for the analyis. We thought mean, median and standard deviation would be the most important statistics, and lat and lon for mapping purposes.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13823,185 +13995,6 @@ Successfully installed descartes-1.1.0
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#removed columns from income data unnessary for our analysis</span>
-<span class="n">income_df</span> <span class="o">=</span> <span class="n">income_df</span><span class="p">[[</span><span class="s1">&#39;State_Name&#39;</span><span class="p">,</span><span class="s1">&#39;City&#39;</span><span class="p">,</span><span class="s1">&#39;Mean&#39;</span><span class="p">,</span><span class="s1">&#39;Median&#39;</span><span class="p">,</span><span class="s1">&#39;Stdev&#39;</span><span class="p">,</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="s1">&#39;Lon&#39;</span><span class="p">]]</span>
-
-<span class="c1">#rename state column to match income name</span>
-<span class="n">income_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;State_Name&#39;</span><span class="p">:</span><span class="s1">&#39;State&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">income_df</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>State</th>
-      <th>City</th>
-      <th>Mean</th>
-      <th>Median</th>
-      <th>Stdev</th>
-      <th>Lat</th>
-      <th>Lon</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Alabama</td>
-      <td>Chickasaw</td>
-      <td>38773</td>
-      <td>30506</td>
-      <td>33101</td>
-      <td>30.771450</td>
-      <td>-88.079697</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Alabama</td>
-      <td>Louisville</td>
-      <td>37725</td>
-      <td>19528</td>
-      <td>43789</td>
-      <td>31.708516</td>
-      <td>-85.611039</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Alabama</td>
-      <td>Columbiana</td>
-      <td>54606</td>
-      <td>31930</td>
-      <td>57348</td>
-      <td>33.191452</td>
-      <td>-86.615618</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Alabama</td>
-      <td>Satsuma</td>
-      <td>63919</td>
-      <td>52814</td>
-      <td>47707</td>
-      <td>30.874343</td>
-      <td>-88.009442</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Alabama</td>
-      <td>Dauphin Island</td>
-      <td>77948</td>
-      <td>67225</td>
-      <td>54270</td>
-      <td>30.250913</td>
-      <td>-88.171268</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>32521</th>
-      <td>Puerto Rico</td>
-      <td>Guaynabo</td>
-      <td>30649</td>
-      <td>13729</td>
-      <td>37977</td>
-      <td>18.397925</td>
-      <td>-66.130633</td>
-    </tr>
-    <tr>
-      <th>32522</th>
-      <td>Puerto Rico</td>
-      <td>Aguada</td>
-      <td>15520</td>
-      <td>9923</td>
-      <td>15541</td>
-      <td>18.385424</td>
-      <td>-67.203310</td>
-    </tr>
-    <tr>
-      <th>32523</th>
-      <td>Puerto Rico</td>
-      <td>Aguada</td>
-      <td>41933</td>
-      <td>34054</td>
-      <td>31539</td>
-      <td>18.356565</td>
-      <td>-67.180686</td>
-    </tr>
-    <tr>
-      <th>32524</th>
-      <td>Puerto Rico</td>
-      <td>Aguada</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>18.412041</td>
-      <td>-67.213413</td>
-    </tr>
-    <tr>
-      <th>32525</th>
-      <td>Puerto Rico</td>
-      <td>Aguadilla</td>
-      <td>28049</td>
-      <td>20229</td>
-      <td>33333</td>
-      <td>18.478094</td>
-      <td>-67.160453</td>
-    </tr>
-  </tbody>
-</table>
-<p>32526 rows × 7 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#removed columns from shooting data unnessary for our analysis</span>
 <span class="n">shootings_df</span> <span class="o">=</span> <span class="n">shootings_df</span><span class="p">[[</span><span class="s1">&#39;city&#39;</span><span class="p">,</span><span class="s1">&#39;state&#39;</span><span class="p">]]</span>
 
@@ -14025,7 +14018,7 @@ Successfully installed descartes-1.1.0
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/opt/conda/lib/python3.8/site-packages/pandas/core/frame.py:4290: SettingWithCopyWarning: 
+<pre>/opt/conda/lib/python3.8/site-packages/pandas/core/frame.py:4290: SettingWithCopyWarning:
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -14036,7 +14029,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -14131,9 +14124,17 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For our police brutality data frame, we decided to seperate it into two different frames. One contianing the city and state of the case, and the other containing the demographics of the victims.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#importing population per city data frame and turning it into data frame</span>
@@ -14152,7 +14153,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -14308,7 +14309,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#only keep columns that were needed</span>
@@ -14330,7 +14331,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -14440,13 +14441,21 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="MILESTONE-2:-SETTING-UP-AND-CLEANING-DATA">MILESTONE 2: SETTING UP AND CLEANING DATA<a class="anchor-link" href="#MILESTONE-2:-SETTING-UP-AND-CLEANING-DATA">&#182;</a></h1>
+<p>For our polulation data, we only kept the 2019 population since that is all we needed to standardize our police brutality cases</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="DATA-PROCESSING">DATA PROCESSING<a class="anchor-link" href="#DATA-PROCESSING">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#converts all State names to State codes</span>
@@ -14501,7 +14510,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     <span class="s1">&#39;WV&#39;</span><span class="p">:</span><span class="s1">&#39;West Virginia&#39;</span><span class="p">,</span>
     <span class="s1">&#39;WI&#39;</span><span class="p">:</span><span class="s1">&#39;Wisconsin&#39;</span><span class="p">,</span>
     <span class="s1">&#39;WY&#39;</span><span class="p">:</span><span class="s1">&#39;Whyoming&#39;</span>
-    
+
 <span class="p">})</span>
 
 <span class="n">shootings_df</span>
@@ -14521,7 +14530,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>&lt;ipython-input-13-77f39a93a66a&gt;:2: SettingWithCopyWarning: 
+<pre>&lt;ipython-input-11-77f39a93a66a&gt;:2: SettingWithCopyWarning:
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -14533,7 +14542,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -14638,7 +14647,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#count amount of shootings in each city and create data frame</span>
@@ -14669,7 +14678,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -15215,7 +15224,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>After merging our income, police brutality cases, and population data frames, we had to get the rate of police brutality cases per 10,000 people. To do that, we divided the count of police brulaity cases by the population of the city, and then multiplied it by 10,000. By having the rates, the data is more comparable, since some cities have such a small population but high police brutality numbers.</p>
+<p>After merging our income, police brutality cases, and population data frames, we had to get the rate of police brutality cases per 10,000 people. To do that, we divided the count of police brutality cases by the population of the city, and then multiplied it by 10,000. By having the rates, the data is more comparable, since some cities have such a small population but high police brutality numbers.</p>
 
 </div>
 </div>
@@ -15223,7 +15232,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="MILESTONE-2:-EXPLORING-DATA">MILESTONE 2: EXPLORING DATA<a class="anchor-link" href="#MILESTONE-2:-EXPLORING-DATA">&#182;</a></h1>
+<h1 id="EXPLORATORY-ANALYSIS-&amp;-DATA-VISUALIZATION">EXPLORATORY ANALYSIS &amp; DATA VISUALIZATION<a class="anchor-link" href="#EXPLORATORY-ANALYSIS-&amp;-DATA-VISUALIZATION">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15234,7 +15243,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#plots the longitutate and lagititude of each shooting</span>
 <span class="n">geometry</span> <span class="o">=</span> <span class="p">[</span><span class="n">Point</span><span class="p">(</span><span class="n">xy</span><span class="p">)</span> <span class="k">for</span> <span class="n">xy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">income_shooting_df_inner</span><span class="p">[</span><span class="s1">&#39;Lon&#39;</span><span class="p">],</span> <span class="n">income_shooting_df_inner</span><span class="p">[</span><span class="s1">&#39;Lat&#39;</span><span class="p">])]</span>
-<span class="n">gdf</span> <span class="o">=</span> <span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">income_shooting_df_inner</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">geometry</span><span class="p">)</span>   
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">income_shooting_df_inner</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">geometry</span><span class="p">)</span>
 
 <span class="c1">#this is a simple map that goes with geopandas</span>
 <span class="n">world</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">gpd</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;naturalearth_lowres&#39;</span><span class="p">))</span>
@@ -15292,7 +15301,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the map above we plotted the shootings in the US. Each red dot represents the location of a shooting. Clusters reperesent multiple shootings. If you notice the more populated cities tend to have more shootings which makes sence. Furthermore, we do not see as many police shootings in the midwest, or southwestern part of the country. Most shootings occur in the east, with the excpetion of California</p>
+<p>In the map above we plotted the shootings in the US. Each red dot represents the location of a shooting. Clusters represent multiple shootings. If you notice the more populated cities, tend to have more shootings which makes sence. Futermore, we do not see as many police shootings in the midwest, or southwestern part of the country. Most shootings occur in the east, with the excpetion of California</p>
 
 </div>
 </div>
@@ -15322,12 +15331,12 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     <span class="n">logheatmap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">heatmap</span><span class="p">)</span>
     <span class="n">logheatmap</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isneginf</span><span class="p">(</span><span class="n">logheatmap</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">logheatmap</span> <span class="o">=</span> <span class="n">ndimage</span><span class="o">.</span><span class="n">filters</span><span class="o">.</span><span class="n">gaussian_filter</span><span class="p">(</span><span class="n">logheatmap</span><span class="p">,</span> <span class="n">smoothing</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
-    
+
     <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">logheatmap</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">extent</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    
+
 <span class="n">heatmap</span><span class="p">(</span><span class="n">income_shooting_df_inner</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">smoothing</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
@@ -15373,7 +15382,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Since the map before did not properly incdicate the amount of shootings per area, we decided to create a heat map to show the amount of shooting given in an rea. The hotter the color ( so the closer to red) the most shootings there are in a location. If you notice as before, most shootings occur in th east, with the excpetion of California.</p>
+<p>Since the map before did not properly incdicate the amount of shootings per area, we decided to create a heat map to show the amount of shooting given in an rea. The hotter the color ( so the closer to red) the most shootings there are in a location. If you notice as before, most shootings occur in the east, with the exception of California.</p>
 
 </div>
 </div>
@@ -15474,9 +15483,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The first pie chart above shows the proportion of shootings by race. The major take away from this graph is that proportionally speaking white people are more likely to get shot by the police than black people. However, the argument about black people experiencing worse treatment by cops than their counterparts derives from the percentage of shooting compared to there population. According to governing.com, african-americas comprise of 12.5% of the american population, but according to our stats make up approximelty 25% of police brutality cases. Where as white people make up about 60% of the US polulation but only account for half of police brutality case.</p>
-<p>The second pie chart shows the propertion of victims by race. Clearly there the majority of policie bruality victims are males.</p>
-<p>The last chart is a histogram of police brulaity victims by age. The marjoity of victimes fall in the late 20s early 30 age group, with the least falling past 65.</p>
+<p>The first pie chart above shows the proportion of shootings by race. The major take away from this graph is that proportionately speaking white people are more likely to get shot by a police than black people. However, the argument about black people experiencing worse treatment by cops than there counterparts derives from the percentage of shooting compared to there population. According to governing.com, African Americas comprise of 12.5% of the american population, but according to our stats make up approximately 25% of police brutality cases. Where as white people make up about 60% of the US polulation but only account for half of police brutality case.</p>
+<p>The second pie chart shows the proportion of victims by race. Clearly there the majority of police brutality victims are males.</p>
+<p>The last chart is a histogram of police brutality victims by age. The marjoity of victimes fall in the late 20s early 30 age group, with the least falling past 65.</p>
 
 </div>
 </div>
@@ -15547,18 +15556,25 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="ANALYSIS-&amp;-HYPOTHESIS-TESTING">ANALYSIS &amp; HYPOTHESIS TESTING<a class="anchor-link" href="#ANALYSIS-&amp;-HYPOTHESIS-TESTING">&#182;</a></h1>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#standardized mean and standard deviation to make graph more readable </span>
-<span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Mean_std&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span> 
-    <span class="p">(</span><span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> 
+<span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Mean_std&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span>
     <span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
 
-<span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Stdev_std&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span> 
-    <span class="p">(</span><span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Stdev&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Stdev&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span> 
+<span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Stdev_std&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Stdev&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Stdev&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">/</span>
     <span class="n">income_shooting_df_all</span><span class="p">[</span><span class="s1">&#39;Stdev&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
 
 <span class="c1">#removes all cities without a population or rate to get more accurate results </span>
@@ -15771,14 +15787,14 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Since the mean and standard deviation numbers had a larger range, we thought it would be easier and more understable to standardize the mean and standard deviation. We did this by normalizing the numbers, so if you look at the graphs below, it makes more sence how the rates correlate.</p>
+<p>Since the mean and standard deviation numbers had a larger range, we thought it would be easier and more understandable to standardize the mean and standard deviation. We did this by normalizing the numbers, so if you look at the graphs below, it makes more sense how the rates correlate.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#fills NaN with 0 so correlation purposes</span>
@@ -15797,7 +15813,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -16060,9 +16076,17 @@ Name: rate, dtype: float64</pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Overall, our project does support our hypothesis that low income areas tend to have more police shootings. This would make sense, and lower income areas tend to have more crime, and therefore stricter policing. Similarly, places with large income dispareties also have a stricter police force, which results in more cases of police brutality.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># refine a data frame to cities with populations greater than 100,000</span>
@@ -16078,7 +16102,7 @@ Name: rate, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#graphing relationship between mean and counts for cities with populations greater than 100,000</span>
@@ -16151,7 +16175,7 @@ Name: rate, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#fills NaN with 0 so correlation purposes</span>
@@ -16174,7 +16198,7 @@ Name: rate, dtype: float64</pre>
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/opt/conda/lib/python3.8/site-packages/pandas/core/frame.py:4311: SettingWithCopyWarning: 
+<pre>/opt/conda/lib/python3.8/site-packages/pandas/core/frame.py:4311: SettingWithCopyWarning:
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -16185,7 +16209,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -16320,7 +16344,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#creates cooraltion matrix between desired variables</span>
@@ -16341,7 +16365,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -16363,7 +16387,7 @@ Name: rate, dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the above cell you can find the correlations for the 100,000 city population data. We wanted to refine our data to large cities in order to analyze the shooting income correlations for high population areas. As compared to the total country data this more refined data provides a stronger correlation. A negative correlation here suggests that as mean income rises, the amount of police shootings decrease. Again, this makes sence as I add assume places with more money have less police brutlaity cases. Furthermore, cities with lower income inequality tend to see more police brulaity cases.</p>
-<p>You can observe similar trends seen in the origial two graphs, however within a more refined an accurate range. The mean graph is mostly skewed to the left. This supports our original analysis that for areas with lower income, they experience higher levels of police brutality. Furthermore, for the standard deviation graph, again it is mostly centered. However, for this more refined scale we can observe a stronger skew to the left. This supports our statement that low income areas are subjected to high levels of police brutality.</p>
+<p>You can observe similar trends seen in the origial two graphs, however within a more refined an accurate range. The mean graph is mostly skewed to the left. This supports our original analysis that for areas with lower income, they experience higher levels of police brutality. Furthermore, for the standard deviation graph, again it is mostly centered. However, for this more refined scale we can observe a stronger skew to the left. These two observations support our original hypothesis that low income areas are subjected to high levels of police brutality.</p>
 
 </div>
 </div>
@@ -16371,7 +16395,23 @@ Name: rate, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Policy,-Insights,-Conclusion">Policy, Insights, Conclusion<a class="anchor-link" href="#Policy,-Insights,-Conclusion">&#182;</a></h1><p>Utilizing our analysis, we can effectively locate areas subjected to vulnerability. We can share our findings with the police force in order to more educate, prepare, and avoid for high volumes of shootings for a given city. From this project we have learned just how powerful the intersection and collaboration of a variety of python data tools can be in order to perform an in depth analytical study. We also learned that raw rates are not always effective in comparing certain statistics. Overall, people can use Data analysis to solve problems that face our everyday lives.</p>
+<h1 id="INSIGHT-&amp;-POLICY-DECISION">INSIGHT &amp; POLICY DECISION<a class="anchor-link" href="#INSIGHT-&amp;-POLICY-DECISION">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Utilizing our analysis, we can effectively locate areas subjected to vulnerability. We can share our findings with the police force in order to more educate, prepare, and avoid for high volumes of shootings for a given city. From this project we have learned just how powerful the intersection and collaboration of a variety of python data tools can be in order to perform an in depth analytical study. We also learned that raw rates are not always effective in comparing certain statistics. Overall, people can use Data analysis to solve problems that face our everyday lives.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Further-Resources">Further Resources<a class="anchor-link" href="#Further-Resources">&#182;</a></h2><p>An article about the death of george floyd is attached here: <a href="https://www.nytimes.com/2020/05/31/us/george-floyd-investigation.html">https://www.nytimes.com/2020/05/31/us/george-floyd-investigation.html</a></p>
+<p>A link to a non-profit group called the marshall project, which is speer heading the police reform movement is attached here: <a href="https://www.themarshallproject.org/records/110-police-reform">https://www.themarshallproject.org/records/110-police-reform</a></p>
 
 </div>
 </div>
@@ -16381,7 +16421,7 @@ Name: rate, dtype: float64</pre>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span>
 </pre></div>
 
     </div>
@@ -16393,8 +16433,7 @@ Name: rate, dtype: float64</pre>
   </div>
 </body>
 
- 
+
 
 
 </html>
-
